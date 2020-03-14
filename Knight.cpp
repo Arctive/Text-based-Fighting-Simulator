@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "Knight.h"
 #include <iostream>
 #include <string>

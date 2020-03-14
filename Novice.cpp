@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "Character.h"
 #include "Novice.h"
 #include <iostream>

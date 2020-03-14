@@ -1,4 +1,3 @@
-#pragma once
 #include "Entity.h"
 #include <string>
 using namespace std;

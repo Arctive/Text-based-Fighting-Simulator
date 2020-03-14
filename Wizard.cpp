@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "Wizard.h"
 #include <iostream>
 #include <string>
