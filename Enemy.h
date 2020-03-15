@@ -1,3 +1,5 @@
+#ifndef ENEMY_H
+#define ENEMY_H
 #include "Entity.h"
 #include <string>
 using namespace std;
@@ -17,3 +19,4 @@ public:
 	virtual int getAttack();
 	virtual void printAtkMsg();
 };
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef BOSS_H
+#define BOSS_H
 #include "Enemy.h"
 #include <string>
 using namespace std;
@@ -19,3 +20,4 @@ public:
 	int getAttack();
 	void printAtkMsg();
 };
+#endif

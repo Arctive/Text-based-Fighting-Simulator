@@ -1,4 +1,5 @@
-#pragma once
+#ifndef KNIGHT_H
+#define KNIGHT_H
 #include "Character.h"
 #include <string>
 using namespace std;
@@ -18,3 +19,4 @@ public:
 	void updateHP(int);
 	void updateXP(int);
 };
+#endif

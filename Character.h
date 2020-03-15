@@ -1,3 +1,5 @@
+#ifndef CHARACTER_H
+#define CHARACTER_H
 #include "Entity.h"
 #include <iostream>
 #include <string>
@@ -19,3 +21,4 @@ public:
 	virtual void updateHP(int) = 0;		//use while fighting
 	virtual void updateXP(int) = 0;		//use if won fight
 };
+#endif

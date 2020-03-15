@@ -1,3 +1,5 @@
+#ifndef ENTITY_H
+#define ENTITY_H
 #include <string>
 using namespace std;
 
@@ -15,3 +17,4 @@ public:
 	int getLevel() { return level; }
 	void printHealth();
 };
+#endif

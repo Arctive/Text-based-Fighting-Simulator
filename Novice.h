@@ -1,4 +1,5 @@
-#pragma once
+#ifndef NOVICE_H
+#define NOVICE_H
 #include "Character.h"
 #include <string>
 using namespace std;
@@ -17,3 +18,4 @@ public:
 	void updateHP(int);
 	void updateXP(int);
 };
+#endif
