@@ -1,5 +1,5 @@
-#include "Character.h"
-#include "Novice.h"
+#include "Character.hpp"
+#include "Novice.hpp"
 #include <iostream>
 #include <string>
 

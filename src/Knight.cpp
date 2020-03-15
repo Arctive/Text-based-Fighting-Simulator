@@ -1,4 +1,5 @@
-#include "Knight.h"
+#include "Character.hpp"
+#include "Knight.hpp"
 #include <iostream>
 #include <string>
 using namespace std;

@@ -1,4 +1,5 @@
-#include "Character.h"
+#include "Entity.hpp"
+#include "Character.hpp"
 #include <iostream>
 #include <string>
 using namespace std;

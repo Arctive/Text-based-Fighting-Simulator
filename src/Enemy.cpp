@@ -1,4 +1,5 @@
-#include "Enemy.h"
+#include "Entity.hpp"
+#include "Enemy.hpp"
 #include <iostream>
 #include <string>
 using namespace std;

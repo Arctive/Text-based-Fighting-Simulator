@@ -1,6 +1,6 @@
-#ifndef NOVICE_H
-#define NOVICE_H
-#include "Character.h"
+#ifndef NOVICE_HPP
+#define NOVICE_HPP
+#include "Character.hpp"
 #include <string>
 using namespace std;
 

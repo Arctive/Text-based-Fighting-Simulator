@@ -1,5 +1,5 @@
-#include "Boss.h"
-#include "Enemy.h"
+#include "Boss.hpp"
+#include "Enemy.hpp"
 #include <string>
 #include <iostream>
 using namespace std;

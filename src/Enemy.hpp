@@ -1,6 +1,6 @@
-#ifndef ENEMY_H
-#define ENEMY_H
-#include "Entity.h"
+#ifndef ENEMY_HPP
+#define ENEMY_HPP
+#include "Entity.hpp"
 #include <string>
 using namespace std;
 

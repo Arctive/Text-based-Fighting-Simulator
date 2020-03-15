@@ -1,6 +1,6 @@
-#ifndef CHARACTER_H
-#define CHARACTER_H
-#include "Entity.h"
+#ifndef CHARACTER_HPP
+#define CHARACTER_HPP
+#include "Entity.hpp"
 #include <iostream>
 #include <string>
 using namespace std;

@@ -1,6 +1,6 @@
-#ifndef BOSS_H
-#define BOSS_H
-#include "Enemy.h"
+#ifndef BOSS_HPP
+#define BOSS_HPP
+#include "Enemy.hpp"
 #include <string>
 using namespace std;
 

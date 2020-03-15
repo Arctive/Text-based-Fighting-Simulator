@@ -1,6 +1,6 @@
-#ifndef WIZARD_H
-#define WIZARD_H
-#include "Character.h"
+#ifndef WIZARD_HPP
+#define WIZARD_HPP
+#include "Character.hpp"
 #include <string>
 using namespace std;
 

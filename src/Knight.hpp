@@ -1,6 +1,6 @@
-#ifndef KNIGHT_H
-#define KNIGHT_H
-#include "Character.h"
+#ifndef KNIGHT_HPP
+#define KNIGHT_HPP
+#include "Character.hpp"
 #include <string>
 using namespace std;
 

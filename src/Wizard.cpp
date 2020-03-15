@@ -1,4 +1,5 @@
-#include "Wizard.h"
+#include "Character.hpp"
+#include "Wizard.hpp"
 #include <iostream>
 #include <string>
 using namespace std;

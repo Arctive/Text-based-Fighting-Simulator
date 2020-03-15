@@ -1,10 +1,10 @@
-#include "Entity.h"
-#include "Character.h"
-#include "Novice.h"
-#include "Knight.h"
-#include "Wizard.h"
-#include "Enemy.h"
-#include "Boss.h"
+#include "Entity.hpp"
+#include "Character.hpp"
+#include "Novice.hpp"
+#include "Knight.hpp"
+#include "Wizard.hpp"
+#include "Enemy.hpp"
+#include "Boss.hpp"
 #include <iostream>
 #include <iomanip>
 #include <string>
