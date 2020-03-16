@@ -6,6 +6,9 @@ In this text-based fighting game, players must explore and fight enemies in orde
 Players can select from 3 different character classes: Novice, Knight, and Wizard.
 
 The main menu allows the following options:
+
+![menu](images/demo_play.png)
+
 1. **Exploration**
     * The player has a chance of encountering enemies, mini-bosses, or nothing.
     * Engaging in a fight with an enemy triggers a 1v1 fight
