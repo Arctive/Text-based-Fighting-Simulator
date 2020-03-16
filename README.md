@@ -1,9 +1,9 @@
 # Text-based Fighting Simulator
-In this text-based fighting game, players must explore and fight enemies in order to level up and stand a chance against a final boss.
+Players must explore and fight enemies to level up their characters in order to stand a chance against the final boss.
 
 
 ## Gameplay
-Players can select from 3 different character classes: Novice, Knight, and Wizard.
+Select from 3 different character classes: Novice, Knight, and Wizard.
 
 The main menu allows the following options:
 
