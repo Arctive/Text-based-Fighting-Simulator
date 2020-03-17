@@ -2,7 +2,6 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-using namespace std;
 
 Entity::Entity()
 {
@@ -11,7 +10,7 @@ Entity::Entity()
 	hp = maxHP = level = 0;
 }
 
-Entity::Entity(string na, int h, int lv, int max)
+Entity::Entity(std::string na, int h, int lv, int max)
 {
 	//parameterized constructor
 	name = na;
@@ -23,5 +22,5 @@ Entity::Entity(string na, int h, int lv, int max)
 void Entity::printHealth()
 {
 	//displays the health as hp/maxHP
-	cout << right << setw(3) << hp << "/" << left << setw(3) << maxHP;
+	std::cout << std::right << std::setw(3) << hp << "/" << std::left << std::setw(3) << maxHP;
 }
