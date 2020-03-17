@@ -2,7 +2,6 @@
 #include "Character.hpp"
 #include <iostream>
 #include <string>
-using namespace std;
 
 Character::Character()
 {
@@ -10,7 +9,7 @@ Character::Character()
 	xp = levelUp = 0;
 }
 
-Character::Character(string na, int h, int lv, int max, int x, int up):Entity(na,h,lv,max)
+Character::Character(std::string na, int h, int lv, int max, int x, int up):Entity(na,h,lv,max)
 {
 	//parameterized constructor, initializes attributes
 	levelUp = up; 
@@ -20,10 +19,10 @@ Character::Character(string na, int h, int lv, int max, int x, int up):Entity(na
 void Character::print()
 {
 	//prints character info (name, level, health, experience)
-	cout << "Name:     " << name << endl;
-	cout << "Level:    " << level << endl;
-	cout << "Health:   " << hp << "/" << maxHP << endl;
-	cout << "XP:       " << xp << "/" << levelUp << endl;
+	std::cout << "Name:     " << name << std::endl;
+	std::cout << "Level:    " << level << std::endl;
+	std::cout << "Health:   " << hp << "/" << maxHP << std::endl;
+	std::cout << "XP:       " << xp << "/" << levelUp << std::endl;
 }
 
 void Character::addHP(int num)
