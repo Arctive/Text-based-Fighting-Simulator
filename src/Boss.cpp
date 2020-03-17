@@ -2,7 +2,6 @@
 #include "Enemy.hpp"
 #include <string>
 #include <iostream>
-using namespace std;
 
 Boss::Boss()
 {
@@ -21,7 +20,7 @@ Boss::Boss(int na, int lv, int h)
 	hp = maxHP = (50 + rand() % h); //random num based on opponent health, plus 50
 }
 
-Boss::Boss(string na, string wna, int lv, int h)
+Boss::Boss(std::string na, std::string wna, int lv, int h)
 {
 	//receives the name, weapon name, level, and health
 	//USE FOR FINAL BOSS
@@ -48,5 +47,5 @@ int Boss::getAttack()
 void Boss::printAtkMsg()
 {
 	//displays an attack message
-	cout << endl << name << " attacks with the " << bossWeapon << "!" << endl;
+	std::cout << endl << name << " attacks with the " << bossWeapon << "!" << endl;
 }

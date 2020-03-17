@@ -1,21 +1,19 @@
 #ifndef BOSS_HPP
 #define BOSS_HPP
 #include "Enemy.hpp"
-#include <string>
-using namespace std;
 
 class Boss : public Enemy
 {
 private:
-	string bossWeapon;
-	string miniNames[9] = { "Mega Scout", "Mega Soldier", "Mega Pyro", "Mega Hoovy",
+	std::string bossWeapon;
+	std::string miniNames[9] = { "Mega Scout", "Mega Soldier", "Mega Pyro", "Mega Hoovy",
 		"Mega Demoman", "Mecha Engineer", "Mega Medic", "Mega Sniper", "Mega Spy" };
-	string miniWeapons[9] = { "Scattergun", "Beggar's Bazooka", "Nostromo Napalmer",
+	std::string miniWeapons[9] = { "Scattergun", "Beggar's Bazooka", "Nostromo Napalmer",
 		"Family Business", "Eyelander", "Shotgun", "Ubersaw", "Machina", "Ambassador"};
 public:
 	Boss();
 	Boss(int, int, int);
-	Boss(string, string, int, int);
+	Boss(std::string, std::string, int, int);
 	void updateHP(int);
 	int getAttack();
 	void printAtkMsg();
