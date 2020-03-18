@@ -10,23 +10,22 @@
 #include <string>
 #include <ctime>
 #include <vector>
-using namespace std;
 
 //*********Function prototypes**********//
 //Character creation
 void openingDialog();
-void createTeam(vector<Character*>&, int);
+void createTeam(std::vector<Character*>&, int);
 int charMenu();
-void newCharacter(vector<Character*>&, int);
+void newCharacter(std::vector<Character*>&, int);
 //Main menu
-void demoExplore(vector<Character*>, Enemy&, Boss&, int&, int&);
+void demoExplore(std::vector<Character*>, Enemy&, Boss&, int&, int&);
 int exploreMenu();
-void noFight(vector<Character*>);
-void exploreWild(vector<Character*>, Enemy&, Boss&, int&);
-void rest(vector<Character*>, int&);
-void printTeamInfo(vector<Character*>);
+void noFight(std::vector<Character*>);
+void exploreWild(std::vector<Character*>, Enemy&, Boss&, int&);
+void rest(std::vector<Character*>, int&);
+void printTeamInfo(std::vector<Character*>);
 //Fight enemies
-Character* chooseCharacter(vector<Character*>);
+Character* chooseCharacter(std::vector<Character*>);
 int fightMenu();
 void blockAttack(Character*, Enemy&);
 void printFightInfo(Character*, Enemy);
@@ -35,17 +34,17 @@ void enemAttack(Character*, Enemy&, int);
 bool charFatality(Character*, Enemy);
 void processEnemFight(Character*, Enemy&, int&);
 //Fight boss
-Boss createMiniBoss(vector<Character*>);
-void printBossInfo(vector<Character*>, Boss); 
-void processBossFight(vector<Character*>, Boss&);
+Boss createMiniBoss(std::vector<Character*>);
+void printBossInfo(std::vector<Character*>, Boss); 
+void processBossFight(std::vector<Character*>, Boss&);
 //End game
-bool teamFatality(vector<Character*>);
-bool quitGame(vector<Character*>, Boss, int);
+bool teamFatality(std::vector<Character*>);
+bool quitGame(std::vector<Character*>, Boss, int);
 
 int main()
 {
 	//declare and initialize variables, vectors, and objects
-	vector<Character*> team;
+	std::vector<Character*> team;
 	Enemy badguy;
 	Boss miniBoss, finalBoss = Boss("THANOS", "Infinity Gauntlet", 100, 1000);
 	int exploreChoice, members = 3, addToEnemyAtk = 0, steps = 1000, demo = 0;
@@ -98,7 +97,7 @@ int main()
 //**********************************************************************************//
 
 //**************************Character creation**************************************//
-void createTeam(vector<Character*>& list, int mem)
+void createTeam(std::vector<Character*>& list, int mem)
 {
 	//receives the team vector and its size
 	//calls charMenu and newCharacter to create characters to be saved to vector
@@ -134,7 +133,7 @@ int charMenu()
 	return op;
 }
 
-void newCharacter(vector<Character*>& list, int op)
+void newCharacter(std::vector<Character*>& list, int op)
 {
 	//receives the team vector and the user choice
 	//asks for new character info to be saved to vector
@@ -206,7 +205,7 @@ int exploreMenu()
 	return op;
 }
 
-void noFight(vector<Character*> list)
+void noFight(std::vector<Character*> list)
 {
 	//receives the team vector, adds 5 XP to all characters
 	for (int i = 0; i < list.size(); i++)
@@ -218,7 +217,7 @@ void noFight(vector<Character*> list)
 	cout << " -Gained 5xp-" << endl;
 }
 
-void exploreWild(vector<Character*> team, Enemy& badguy, Boss& miniBoss, int& addToEnemyAtk)
+void exploreWild(std::vector<Character*> team, Enemy& badguy, Boss& miniBoss, int& addToEnemyAtk)
 {
 	//receives the team vector, Enemy, and Boss objects
 	//generates a random number, then decides on type of encounter
@@ -256,7 +255,7 @@ void exploreWild(vector<Character*> team, Enemy& badguy, Boss& miniBoss, int& ad
 	}
 }
 
-void rest(vector<Character*> list, int& up)
+void rest(std::vector<Character*> list, int& up)
 {
 	//receives the team vector and enemy attack modifier, restores health to live team members
 	for (int i = 0; i < list.size(); i++)
@@ -267,7 +266,7 @@ void rest(vector<Character*> list, int& up)
 	up++; //increment to increase enemy attacks
 }
 
-void printTeamInfo(vector<Character*> list)
+void printTeamInfo(std::vector<Character*> list)
 {
 	//receives the team vector, prints each character's info
 	cout << "\n**************************" << endl;
@@ -283,7 +282,7 @@ void printTeamInfo(vector<Character*> list)
 }
 
 //********************************Fight enemies************************************//
-Character* chooseCharacter(vector<Character*> list)
+Character* chooseCharacter(std::vector<Character*> list)
 {
 	//receives the team vector, prints the list of names, returns validated user choice
 	int ch;
@@ -473,7 +472,7 @@ void processEnemFight(Character* chosenOne, Enemy& badguy, int& addToEnemyAtk)
 }
 
 //***********************************Fight boss************************************//
-Boss createMiniBoss(vector<Character*> list)
+Boss createMiniBoss(std::vector<Character*> list)
 {
 	//receives the team vector, creates a miniboss based on the team stats
 	int totlevel = 0, totHP = 0;
@@ -485,7 +484,7 @@ Boss createMiniBoss(vector<Character*> list)
 	return Boss(rand() % 9, totlevel, totHP);
 }
 
-void printBossInfo(vector<Character*> list, Boss bad)
+void printBossInfo(std::vector<Character*> list, Boss bad)
 {
 	//receives the team vector and the boss
 	//displays the fight info, including names, level, and health
@@ -518,7 +517,7 @@ void printBossInfo(vector<Character*> list, Boss bad)
 	cout << endl << endl;
 }
 
-void processBossFight(vector<Character*> list, Boss& boss)
+void processBossFight(std::vector<Character*> list, Boss& boss)
 {
 	//receives the team vector and the boss
 	//this function processes the boss fight, calls fight functions and updates values accordingly
@@ -579,7 +578,7 @@ void processBossFight(vector<Character*> list, Boss& boss)
 }
 
 //*************************************End Game************************************//
-bool teamFatality(vector<Character*> list)
+bool teamFatality(std::vector<Character*> list)
 {
 	//receives the team vector, determines if all team members have fainted
 	int totHP = 0;
@@ -591,7 +590,7 @@ bool teamFatality(vector<Character*> list)
 		return false;
 }
 
-bool quitGame(vector<Character*> list, Boss fin, int steps)
+bool quitGame(std::vector<Character*> list, Boss fin, int steps)
 {
 	//receives the team vector and the steps from defeat
 	//returns true if team is dead, final boss is dead, or if final boss reached the planet
@@ -614,7 +613,7 @@ bool quitGame(vector<Character*> list, Boss fin, int steps)
 }
 
 //*********************DEMO***********************//
-void demoExplore(vector<Character*> team, Enemy& badguy, Boss& miniBoss, int& addToEnemyAtk, int& demo)
+void demoExplore(std::vector<Character*> team, Enemy& badguy, Boss& miniBoss, int& addToEnemyAtk, int& demo)
 {
 	//demo explore features
 	Character* chosenOne;

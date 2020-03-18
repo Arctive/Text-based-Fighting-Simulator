@@ -2,15 +2,14 @@
 #define ENEMY_HPP
 #include "Entity.hpp"
 #include <string>
-using namespace std;
 
 class Enemy : public Entity
 {
 private:
-	string weapon;
-	string badNames[9] = { "Scout", "Soldier", "Pyro", "Heavy Weapons Guy",
+	std::string weapon;
+	std::string badNames[9] = { "Scout", "Soldier", "Pyro", "Heavy Weapons Guy",
 		"Demoman", "Engineer", "Medic", "Sniper", "Spy" };
-	string wpnNames[9] = { "Baseball bat", "Rocket launcher", "Flamethrower",
+	std::string wpnNames[9] = { "Baseball bat", "Rocket launcher", "Flamethrower",
 		"Minigun", "Grenade launcher", "Wrench", "Bonesaw", "Sniper rifle", "Kunai"};
 public:
 	Enemy();

@@ -2,7 +2,6 @@
 #include "Enemy.hpp"
 #include <iostream>
 #include <string>
-using namespace std;
 
 Enemy::Enemy()
 {
@@ -32,11 +31,11 @@ void Enemy::updateHP(int dmg)
 int Enemy::getAttack()
 {
 	//generates and returns the enemy attack points
-	return (rand()%11)+ level;
+	return (std::rand()%11)+ level;
 }
 
 void Enemy::printAtkMsg()
 {
 	//displays an attack message
-	cout << endl << name << " attacks with their " << weapon << "!" << endl;
+	std::cout << std::endl << name << " attacks with their " << weapon << "!" << std::endl;
 }
