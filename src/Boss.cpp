@@ -47,5 +47,5 @@ int Boss::getAttack()
 void Boss::printAtkMsg()
 {
 	//displays an attack message
-	std::cout << endl << name << " attacks with the " << bossWeapon << "!" << std::endl;
+	std::cout << std::endl << name << " attacks with the " << bossWeapon << "!" << std::endl;
 }
