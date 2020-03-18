@@ -2,7 +2,6 @@
 #include "Wizard.hpp"
 #include <iostream>
 #include <string>
-using namespace std;
 
 Wizard::Wizard()
 {
@@ -13,7 +12,7 @@ Wizard::Wizard()
 	magic = 0;
 }
 
-Wizard::Wizard(string n, string so, int mag)
+Wizard::Wizard(std::string n, std::string so, int mag)
 {
 	//parameterized contructor, receives and initializes Wizard attributes
 	name = n;
@@ -27,20 +26,20 @@ void Wizard::print()
 {
 	//prints Character info and Wizard attributes
 	Character::print();
-	cout << "Type:     " << source << endl;
-	cout << "Magic:    " << magic << endl;
+	std::cout << "Type:     " << source << std::endl;
+	std::cout << "Magic:    " << magic << std::endl;
 }
 
 void Wizard::printAtkMsg()
 {
 	//prints attack message
-	cout << endl << name << " conjures the dark spirits to strike!" << endl;
+	std::cout << std::endl << name << " conjures the dark spirits to strike!" << std::endl;
 }
 
 int Wizard::getAttack()
 {
 	//generates and returns attack points, num btwn 5-15 plus magic
-	return ((5 + rand() % 11) + magic);
+	return ((5 + std::rand() % 11) + magic);
 }
 
 void Wizard::updateHP(int dmg)
@@ -49,7 +48,7 @@ void Wizard::updateHP(int dmg)
 	if (dmg > level)
 		hp -= (dmg - level);
 	else
-		cout << "Your magic shields you!" << endl << "No damage taken!" << endl;
+		std::cout << "Your magic shields you!" << std::endl << "No damage taken!" << std::endl;
 	if (hp < 0) //don't have negative hp
 		hp = 0;
 }
