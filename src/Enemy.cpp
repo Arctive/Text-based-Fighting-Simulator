@@ -16,8 +16,8 @@ Enemy::Enemy(int na, int lv, int health)
 	//receives number between 0-8, and the opponent's level and maxHP
 	name = badNames[na];
 	weapon = wpnNames[na];
-	level = lv + (1 + rand() % 3); //level plus random num btwn 1-3
-	hp = maxHP = (50 + rand() % health); //random num based on opponent health, plus 50
+	level = lv + (1 + std::rand() % 3); //level plus random num btwn 1-3
+	hp = maxHP = (50 + std::rand() % health); //random num based on opponent health, plus 50
 }
 
 void Enemy::updateHP(int dmg)

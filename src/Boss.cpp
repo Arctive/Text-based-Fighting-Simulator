@@ -16,8 +16,8 @@ Boss::Boss(int na, int lv, int h)
 	//receives number between 0-8, and the team's total level and maxHP
 	name = miniNames[na];
 	bossWeapon = miniWeapons[na];
-	level = lv + (1 + rand() % 3); //level plus random num btwn 1-3
-	hp = maxHP = (50 + rand() % h); //random num based on opponent health, plus 50
+	level = lv + (1 + std::rand() % 3); //level plus random num btwn 1-3
+	hp = maxHP = (50 + std::rand() % h); //random num based on opponent health, plus 50
 }
 
 Boss::Boss(std::string na, std::string wna, int lv, int h)
@@ -41,7 +41,7 @@ void Boss::updateHP(int dmg)
 int Boss::getAttack()
 {
 	//generates and returns the enemy attack points
-	return (rand() % 11) + level;
+	return (std::rand() % 11) + level;
 }
 
 void Boss::printAtkMsg()
