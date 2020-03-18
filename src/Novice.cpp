@@ -3,8 +3,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 Novice::Novice()
 {
 	//default constructor, initializes Novice values
@@ -13,7 +11,7 @@ Novice::Novice()
 	luck = 1;
 }
 
-Novice::Novice(string na)
+Novice::Novice(std::string na)
 {
 	//parameterized constructor, receives name, initializes the rest
 	name = na;
@@ -26,19 +24,19 @@ void Novice::print()
 {
 	//prints Character info and luck
 	Character::print();
-	cout << "Luck:     " << luck << endl;
+	std::cout << "Luck:     " << luck << std::endl;
 }
 
 void Novice::printAtkMsg()
 {
 	//prints attack message
-	cout << endl << name << " attacks!" << endl;
+	std::cout << std::endl << name << " attacks!" << std::endl;
 }
 
 int Novice::getAttack()
 {
 	//generates and returns attack points, num btwn 1-10 plus luck
-	return ((1 + rand() % 10) + luck);
+	return ((1 + std::rand() % 10) + luck);
 }
 
 void Novice::updateHP(int dmg)
@@ -58,7 +56,7 @@ void Novice::updateXP(int mlev)
 	{
 		maxHP += 10; //hp increases by 10 
 		hp += 10;
-		luck += (3 + rand() % 3); //increase luck by num btwn 3-5 points
+		luck += (3 + std::rand() % 3); //increase luck by num btwn 3-5 points
 		xp = 0; //reset xp
 		level++; //increment level
 		levelUp += 10; //increase levelUp by 10

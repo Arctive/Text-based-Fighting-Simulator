@@ -28,15 +28,15 @@ void Knight::print()
 {
 	//prints Character info and Knight attributes
 	Character::print();
-	cout << "Armor:    " << armor << std::endl;
-	cout << "Weapon name:  " << wName << std::endl;
-	cout << "Weapon power: " << wPower << std::endl;
+	std::cout << "Armor:    " << armor << std::endl;
+	std::cout << "Weapon name:  " << wName << std::endl;
+	std::cout << "Weapon power: " << wPower << std::endl;
 }
 
 void Knight::printAtkMsg()
 {
 	//prints attack message
-	cout << std::endl << name << " strikes with " << wName << "!" << std::endl;
+	std::cout << std::endl << name << " strikes with " << wName << "!" << std::endl;
 }
 
 int Knight::getAttack()
@@ -51,7 +51,7 @@ void Knight::updateHP(int dmg)
 	if (dmg > armor)
 		hp -= (dmg - armor);
 	else
-		cout << "Your armor absorbed the attack!" << std::endl << "No damage taken!" << std::endl;
+		std::cout << "Your armor absorbed the attack!" << std::endl << "No damage taken!" << std::endl;
 	if (hp < 0) //don't have negative hp
 		hp = 0;
 }
