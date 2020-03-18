@@ -2,7 +2,6 @@
 #include "Knight.hpp"
 #include <iostream>
 #include <string>
-using namespace std;
 
 Knight::Knight()
 {
@@ -14,7 +13,7 @@ Knight::Knight()
 	wPower = 5;
 }
 
-Knight::Knight(string n, string wna)
+Knight::Knight(std::string n, std::string wna)
 {
 	//parameterized constructor, receives and initializes Knight attributes
 	name = n;
@@ -29,21 +28,21 @@ void Knight::print()
 {
 	//prints Character info and Knight attributes
 	Character::print();
-	cout << "Armor:    " << armor << endl;
-	cout << "Weapon name:  " << wName << endl;
-	cout << "Weapon power: " << wPower << endl;
+	cout << "Armor:    " << armor << std::endl;
+	cout << "Weapon name:  " << wName << std::endl;
+	cout << "Weapon power: " << wPower << std::endl;
 }
 
 void Knight::printAtkMsg()
 {
 	//prints attack message
-	cout << endl << name << " strikes with " << wName << "!" << endl;
+	cout << std::endl << name << " strikes with " << wName << "!" << std::endl;
 }
 
 int Knight::getAttack()
 {
 	//generates and returns attack points, num btwn 10-20 plus weapon power
-	return ((10 + rand() % 11) + wPower);
+	return ((10 + std::rand() % 11) + wPower);
 }
 
 void Knight::updateHP(int dmg)
@@ -52,7 +51,7 @@ void Knight::updateHP(int dmg)
 	if (dmg > armor)
 		hp -= (dmg - armor);
 	else
-		cout << "Your armor absorbed the attack!" << endl << "No damage taken!" << endl;
+		cout << "Your armor absorbed the attack!" << std::endl << "No damage taken!" << std::endl;
 	if (hp < 0) //don't have negative hp
 		hp = 0;
 }
